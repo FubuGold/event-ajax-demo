@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+
+    <script type="text/javascript" src="event_demo.js" defer></script>
+</head>
+<body>
+    <hr>
+    <div id="color-change-demo" class="color-change">
+        <button id="color-change-button" class="color-change">Don't click me</button>
+        <p id="color-changing-text" class="color-change">This text will change color.</p>
+    </div>
+
+    <hr>
+    <div id="normal-demo" class="normal">
+        <button id="normal-button" class="normal">Clickmenow</button>
+        <p id="normal-text" class="normal">Number of time this button has been pressed: <span id="normal-counter" class="normal">0</span></p>
+    </div>
+
+    <hr>
+    <div id="throttling-demo" class="throttle">
+        <button id="throttling-button" class="throttle">Please click me</button>
+        <p id="throttling-text" class="throttle">Number of time this button has been pressed: <span id="throttling-counter" class="throttle">0</span></p>
+    </div>
+
+    <hr>
+    <div id="debouncing-demo" class="debounce">
+        <button id="debouncing-button" class="debounce">Please click me</button>
+        <p id="debouncing-text" class="debounce">Number of time this button has been pressed: <span id="debouncing-counter" class="debounce">0</span></p>
+    </div>
+
+    <hr>
+    <div id="capture-bubble-demo" class="capture-bubble">
+        <ul id="capture-bubble-list" class="capture-bubble">
+            <li id="one" class="odd">one</li>
+            <li id="two" class="even">two</li>
+            <li id="three" class="odd">three</li>
+            <li id="four" class="even">four</li>
+            <p id="test-test">Test</p>
+        </ul>
+    </div>
+
+    <hr>
+</body>
+</html>
+<!-- html -> body -> div -> ul -> li : capturing -->
+<!-- li execute handler : targeting -->
+<!-- li -> ul -> div -> body -> html : bubbling -->
