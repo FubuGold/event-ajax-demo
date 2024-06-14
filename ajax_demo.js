@@ -15,6 +15,23 @@ class colorChangeDemo {
     }
 }
 
+class callbackDemo {
+    constructor() {
+        this.button = document.getElementById("callback-button");
+        console.log(this.button);
+        this.button.addEventListener("click",() => this.callbackTester((inputTemp) => {this.tryMe("hello","yes",inputTemp)}));
+    }
+    // callback function
+    tryMe(param1, param2, param3) {
+        alert(param1 + " and " + param2 + " " + param3);
+    }
+    // callback executer 
+    callbackTester(callback) {
+        var extraParam = "this data was missing";
+        callback(extraParam);
+    }
+}
+
 class ajaxDemo {
     constructor() {
         this.getProduct = this.getProduct.bind(this);
@@ -72,8 +89,8 @@ stock: ${currentProduct.stock} <br>
     }
 
     addEvent() {
-        this.getButton.addEventListener("click",this.getProduct);
-        // this.getButton.addEventListener("click",() => setTimeout(this.getProduct,2000));
+        // this.getButton.addEventListener("click",this.getProduct);
+        this.getButton.addEventListener("click",() => setTimeout(this.getProduct,2000));
         this.clearButton.addEventListener("click",this.clearProduct);
         this.displayButton.addEventListener("click",this.displayProduct);
     }
@@ -81,4 +98,5 @@ stock: ${currentProduct.stock} <br>
 
 let colorChangeClass = new colorChangeDemo();
 let ajaxClass = new ajaxDemo(); ajaxClass.addEvent();
+let callbackClass = new callbackDemo();
 
