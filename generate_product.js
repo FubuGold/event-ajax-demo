@@ -46,3 +46,5 @@ function generateProduct(product) {
     const sec_3 = document.getElementById("section-3"); // Create div with id="section-3" to test
     sec_3.insertAdjacentHTML("beforeend",markup)
 }
+// In HTML head include this:
+//     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
